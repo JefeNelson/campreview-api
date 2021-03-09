@@ -33,7 +33,7 @@ const importData = async () => {
   }
 };
 
-// Delete data
+// Delete data from DB
 const deleteData = async () => {
   try {
     await Bootcamp.deleteMany();
@@ -45,6 +45,7 @@ const deleteData = async () => {
   }
 };
 
+// Command line differentiators
 if (process.argv[2] === '-i') {
   importData();
 } else if (process.argv[2] === '-d') {
